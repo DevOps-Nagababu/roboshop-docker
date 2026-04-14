@@ -1,8 +1,8 @@
 services:
-  catalouge:
-    build: ./catalouge
-    image: catalouge:1.0.0
-    container_name: catalouge
+  catalogue:
+    build: ./catalogue
+    image: catalogue:1.0.0
+    container_name: catalogue
     depends_on:
       - mongodb
   mongodb:
@@ -16,4 +16,4 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - catalouge
+      - catalogue
