@@ -1,19 +1,16 @@
 services:
   catalouge:
-    build:
-      dockerfile: catalouge.Dockerfile
+    build: ./catalouge
     image: catalouge:1.0.0
     container_name: catalouge
     depends_on:
       - mongodb
   mongodb:
-    build: 
-      dockerfile: mongodb.Dockerfile
+    build: ./mongodb
     image: mongodb:1.0.0
     container_name: mongodb
   frontend:
-    build: 
-      dockerfile: frontend.Dockerfile
+    build: ./frontend
     image: frontend:1.0.0
     container_name: frontend
     ports:
